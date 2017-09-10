@@ -9,16 +9,6 @@
 	<meta name="description" content="A fast-paced platformer which has the grappling hook in it's core!">
 </head>
 
-<?php
-	$pgs = array(
-	'home'=>'home.php',
-	'gallery'=>'gallery.php',
-	'contact'=>'contact.php',
-	'presskit'=>'presskit.php',
-	);
-	$s = (!empty($_GET['id']))?$_GET['id']:'home'; 
-?>
-
 <body>
 	<div id="banner"></div>
 
@@ -44,12 +34,34 @@
 		</nav>
 
 		<main>
-<?php
-				if (isset($pgs[$s]) && file_exists ("_p/".$pgs[$s])) {
-					include_once ("_p/".$pgs[$s]);
+		
+		
+		
+			<div id="content"></div>
+
+			<script>
+
+				var el = document.getElementById('content');
+				var content;
+
+				// Init
+				if  (!page) {
+					pages = ['home.html', 'gallery.html', 'contact.html', 'presskit.html'];
+					page = 'home';
+					$s = (!empty($_GET['id'])) ? $_GET['id'] : 'home'; 
+	
+					
+					content = '<h1>Home</h1>';
 				}
-				echo "\n";
-?>
+				else {
+					content = '<h1>Not Home</h1>';
+				}
+				
+				//'_p/' + page
+					
+				el.insertAdjacentHTML('afterbegin', content);
+
+			</script>
 		</main>
 	</div>
 		
