@@ -22,7 +22,7 @@
 			// Set Nav buttons
 			var pages = ['home', 'contact', 'gallery']; 
 			for(var i in pages) { var pg = pages[i];
-				$('#nav-' + pg).html(curr_pg == pg ? ('<span class="'+pg+'">'+pg+'</span>') : ('<a class="page" href="'+(pg == 'home' ? '.' : ('?id='+pg))+'">'+pg+'</a>')); 
+				$('#nav-' + pg).html(curr_pg == pg ? ('<span class="page">'+pg+'</span>') : ('<a class="page" href="'+(pg == 'home' ? '.' : ('?id='+pg))+'">'+pg+'</a>')); 
 			}
 			
 			// Load the page content
