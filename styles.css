@@ -26,13 +26,13 @@ body {
 	left: -5px;
 	bottom: 0;
 	z-index: -1;
-	background: url('_img/banner.jpg') center bottom no-repeat #020402;
+	background: url('img/banner.jpg') center bottom no-repeat #020402;
 }
 
 header {
 	height: 540px;
 	position: relative;
-	background: url('_img/ea.png') bottom 0 left calc(50% - 470px) no-repeat;
+	background: url('img/ea.png') bottom 0 left calc(50% - 470px) no-repeat;
 }
 
 header img {
@@ -45,7 +45,7 @@ header img {
 }
 
 #wrap {
-	background: url('_img/bt.png') left top / 100% auto no-repeat, url('_img/bb.png') left bottom / 100% auto no-repeat, url('_img/br.png') left top / 100% 1px repeat-y, #121212;
+	background: url('img/bt.png') left top / 100% auto no-repeat, url('img/bb.png') left bottom / 100% auto no-repeat, url('img/br.png') left top / 100% 1px repeat-y, #121212;
 	min-height: calc(100% - 540px);
 	padding: 0 0 30px 0;
 }
@@ -72,7 +72,7 @@ nav a, nav a:visited, nav span {
 	padding: 0 10px 0 0;
 	margin: 0;
 	font-size: 14px;
-	background: url('_img/nav.png') repeat-x 0 -64px;
+	background: url('img/nav.png') repeat-x 0 -64px;
 	color: white;
 	text-decoration: none;
 	transition: all 0.3s ease;
@@ -140,7 +140,7 @@ main p {
 	float: right;
 	width: 44px;
 	height: 44px;
-	background: url('_img/pixie.png') top right no-repeat;
+	background: url('img/pixie.png') top right no-repeat;
 }*/
 
 main a {
@@ -262,7 +262,7 @@ footer {
 	color: grey;
 	font-size: .6em;
 	clear: both;
-	background: url('_img/w.png') bottom left repeat-x, url('_img/ec.png') bottom 0 right calc(50% - 110px) no-repeat, url('_img/eb.png') bottom 0 left calc(50% - 150px) no-repeat, #0d0d0d;
+	background: url('img/w.png') bottom left repeat-x, url('img/ec.png') bottom 0 right calc(50% - 110px) no-repeat, url('img/eb.png') bottom 0 left calc(50% - 150px) no-repeat, #0d0d0d;
 	outline: 2px solid #121212;
 }
 
@@ -402,7 +402,7 @@ span.bld {
 	display: inline-block;
 	width: 190px;
 	height: 187px;
-	background: url('_img/blade.png') no-repeat;
+	background: url('img/blade.png') no-repeat;
 	position: absolute;
 	bottom: -140px;
 	left: calc(50% - 115px);
@@ -421,7 +421,7 @@ span.po {
 	display: inline-block;
 	width: 54px;
 	height: 80px;
-	background: url('_img/portal.png') left top no-repeat;
+	background: url('img/portal.png') left top no-repeat;
 	animation: portal_orange 400ms infinite steps(9);
 	transform: rotate(10deg);
 	filter: drop-shadow(0px 0px 40px rgba(244,162,4,1));
@@ -434,7 +434,7 @@ span.pb {
 	display: inline-block;
 	width: 54px;
 	height: 80px;
-	background: url('_img/portal.png') left -80px no-repeat;
+	background: url('img/portal.png') left -80px no-repeat;
 	animation: portal_blue 400ms infinite steps(9);
 	transform: rotate(-15deg) scaleX(-1);
 	filter: drop-shadow(0px 0px 50px rgba(106,149,255,60));
