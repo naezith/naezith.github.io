@@ -34,13 +34,8 @@
 		</nav>
 
 		<main>
-		
-		
-		
 			<div id="content"></div>
-
 			<script>
-
 				var el = document.getElementById('content');
 				var content;
 
@@ -48,8 +43,6 @@
 				if  (!page) {
 					pages = ['home.html', 'gallery.html', 'contact.html', 'presskit.html'];
 					page = 'home';
-					$s = (!empty($_GET['id'])) ? $_GET['id'] : 'home'; 
-	
 					
 					content = '<h1>Home</h1>';
 				}
@@ -60,7 +53,6 @@
 				//'_p/' + page
 					
 				el.insertAdjacentHTML('afterbegin', content);
-
 			</script>
 		</main>
 	</div>
