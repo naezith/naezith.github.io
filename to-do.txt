@@ -1,0 +1,3 @@
+Bugs:
+- mp4 videos don't show on mobile most of the time, solution: https://teamtreehouse.com/community/does-mp4-not-work-on-mobile-my-video-works-just-fine-on-desktop-but-i-get-a-black-box-when-i-view-it-on-mobile
+- gallery images might still preload
