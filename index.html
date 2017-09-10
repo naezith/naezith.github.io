@@ -17,6 +17,14 @@
 		<span class="po"></span>
 	</header>
 
+	<script>
+		if  (!page) {
+			pages = ['home.html', 'gallery.html', 'contact.html', 'presskit.html'];
+			page = pages[0];
+		}
+		else page = location.pathname.substring(1);
+	</script>
+	
 	<div id="wrap">
 		<nav>
 			<div>
@@ -37,22 +45,8 @@
 			<div id="content"></div>
 			<script>
 				var el = document.getElementById('content');
-				var content;
-
-				// Init
-				if  (!page) {
-					pages = ['home.html', 'gallery.html', 'contact.html', 'presskit.html'];
-					page = 'home';
-					
-					content = '<h1>Home</h1>';
-				}
-				else {
-					content = '<h1>Not Home</h1>';
-				}
 				
-				//'_p/' + page
-					
-				el.insertAdjacentHTML('afterbegin', content);
+				el.insertAdjacentHTML('afterbegin', '<embed type="text/html" src="_p/' + page + '">');
 			</script>
 		</main>
 	</div>
