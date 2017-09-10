@@ -18,11 +18,11 @@
 	</header>
 
 	<script>
-		if  (!page) {
+		if (page) page = location.pathname.substring(1);
+		else {
 			pages = ['home.html', 'gallery.html', 'contact.html', 'presskit.html'];
 			page = pages[0];
 		}
-		else page = location.pathname.substring(1);
 	</script>
 	
 	<div id="wrap">
