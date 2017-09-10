@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Remnants of Naezith</title>
@@ -9,6 +10,7 @@
 	<meta name="description" content="A fast-paced platformer which has the grappling hook in it's core!">
 </head>
 
+
 <body>
 	<div id="banner"></div>
 
@@ -17,18 +19,10 @@
 		<span class="po"></span>
 	</header>
 
-	<script>
-		if (curr_page) curr_page = location.pathname.substring(1);
-		else {
-			page_list = ['home.html', 'gallery.html', 'contact.html', 'presskit.html'];
-			curr_page = page_list[0];
-		}
-	</script>
-	
 	<div id="wrap">
 		<nav>
 			<div>
-				<a class="home" href=".">home</a>
+				<span class="home">home</span>
 				<a href="https://forums.tigsource.com/index.php?topic=50838.0" target="_blank"><img src="_img/d.png" alt="">devlog</a>
 				<a href="https://twitter.com/naezith" target="_blank" ><img src="_img/t.png" alt="">twitter</a>
 				<a href="http://facebook.com/naezith" target="_blank"><img src="_img/f.png" alt="">facebook</a>
@@ -36,18 +30,39 @@
 			<div>
 				<a href="https://soundcloud.com/pronomicalartist/sets/remnants-of-naezith" target="_blank"><img src="_img/s.png" alt="">soundcloud</a>
 				<a href="https://www.reddit.com/r/naezith" target="_blank"><img src="_img/r.png" alt="">reddit</a>
-				<a class="page" href="?id=gallery.html">gallery</a>
-				<a class="page" href="?id=contact.html">contact</a>
+				<a class="page" href="?id=gallery">gallery</a>
+				<a class="page" href="?id=contact">contact</a>
 			</div>
 		</nav>
 
 		<main>
-			<div id="content"></div>
-			<script>
-				var el = document.getElementById('content');
-				
-				el.insertAdjacentHTML('afterbegin', '<embed type="text/html" src="_p/' + curr_page + '">');
-			</script>
+﻿<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88017924-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+			<figure class="iframe steam">
+				<iframe src="http://store.steampowered.com/widget/590590/"></iframe>
+			</figure>
+			
+			<figure class="iframe yt">
+				<iframe src="https://www.youtube.com/embed/dCLqLxzm79U" allowfullscreen></iframe>
+			</figure>
+			
+			<p>Feel the acceleration in this fast-paced grappling hook platformer, Remnants of Naezith.</p>
+			<p>It focuses on having freedom of movement, solid character control and not having any speed limitations. 
+			The fun of swinging with grappling hooks and the amazing feel of acceleration makes a great combination in this game.</p>
+			
+			<p>You play as Kayra, a human who shares his body with the soul of the ancient thunder dragon, Naezith! 
+			With the powers granted to him by the dragon, Kayra will destroy the Remnants of Naezith, enchanted fragments of the dragon's body, 
+			to prevent anyone from exploiting their power for evil.</p>
+			
+			<a href="http://store.steampowered.com/app/590590/">Wishlist now in Steam!</a>
 		</main>
 	</div>
 		
