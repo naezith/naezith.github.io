@@ -1,74 +1,72 @@
-﻿
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 	<title>Remnants of Naezith</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script> 
+		function getUrlVars() {
+			var vars = [], hash;
+			var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+			for(var i = 0; i < hashes.length; i++) {
+				hash = hashes[i].split('=');
+				vars.push(hash[0]);
+				vars[hash[0]] = hash[1];
+			}
+			return vars;
+		}
+		
+		$(document).ready(function() { 
+			var curr_pg = getUrlVars()['id'] || 'home';
+			
+			// Set Nav buttons
+			var pages = ['home', 'contact', 'gallery']; 
+			for(var i in pages) { var pg = pages[i];
+				$('#nav-' + pg).html(curr_pg == pg ? ('<span class="'+pg+'">'+pg+'</span>') : ('<a class="page" href="'+(pg == 'home' ? '.' : ('?id='+pg))+'">'+pg+'</a>')); 
+			}
+			
+			// Load the page content
+			$("#midcontent").load('_p/' + curr_pg + '.html'); 
+		}); 
+	</script>
+	
 	<link rel="stylesheet" type="text/css" href="styles.css">
-	<link rel="icon" type="image/x-icon" href="img/k.ico">
+	<link rel="icon" type="image/x-icon" href="_img/k.ico">
 	<meta name="viewport" content="width=device-width">
 	<meta charset="utf-8">
 	<meta name="description" content="A fast-paced platformer which has the grappling hook in it's core!">
 </head>
 
-
 <body>
 	<div id="banner"></div>
 
 	<header>
-		<a href="."><img src="img/title.png" alt="Remnants of Naezith"></a>
+		<a href="."><img src="_img/title.png" alt="Remnants of Naezith"></a>
 		<span class="po"></span>
 	</header>
 
 	<div id="wrap">
 		<nav>
 			<div>
-				<span class="home">home</span>
-				<a href="https://forums.tigsource.com/index.php?topic=50838.0" target="_blank"><img src="img/d.png" alt="">devlog</a>
-				<a href="https://twitter.com/naezith" target="_blank" ><img src="img/t.png" alt="">twitter</a>
-				<a href="http://facebook.com/naezith" target="_blank"><img src="img/f.png" alt="">facebook</a>
+				<div id="nav-home"></div>
+				<a href="https://forums.tigsource.com/index.php?topic=50838.0" target="_blank"><img src="_img/d.png" alt="">devlog</a>
+				<a href="https://twitter.com/naezith" target="_blank" ><img src="_img/t.png" alt="">twitter</a>
+				<a href="https://facebook.com/naezith" target="_blank"><img src="_img/f.png" alt="">facebook</a>
 			</div>
 			<div>
-				<a href="https://soundcloud.com/pronomicalartist/sets/remnants-of-naezith" target="_blank"><img src="img/s.png" alt="">soundcloud</a>
-				<a href="https://www.reddit.com/r/naezith" target="_blank"><img src="img/r.png" alt="">reddit</a>
-				<a class="page" href="gallery">gallery</a>
-				<a class="page" href="contact">contact</a>
+				<a href="https://soundcloud.com/pronomicalartist/sets/remnants-of-naezith" target="_blank"><img src="_img/s.png" alt="">soundcloud</a>
+				<a href="https://www.reddit.com/r/naezith" target="_blank"><img src="_img/r.png" alt="">reddit</a>
+				<div id="nav-gallery"></div>
+				<div id="nav-contact"></div>
 			</div>
 		</nav>
 
-		<main>
-﻿<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-88017924-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-			<figure class="iframe steam">
-				<iframe src="https://store.steampowered.com/widget/590590/"></iframe>
-			</figure>
-			
-			<figure class="iframe yt">
-				<iframe src="https://www.youtube.com/embed/dCLqLxzm79U" allowfullscreen></iframe>
-			</figure>
-			
-			<p>Feel the acceleration in this fast-paced grappling hook platformer, Remnants of Naezith.</p>
-			<p>It focuses on having freedom of movement, solid character control and not having any speed limitations. 
-			The fun of swinging with grappling hooks and the amazing feel of acceleration makes a great combination in this game.</p>
-			
-			<p>You play as Kayra, a human who shares his body with the soul of the ancient thunder dragon, Naezith! 
-			With the powers granted to him by the dragon, Kayra will destroy the Remnants of Naezith, enchanted fragments of the dragon's body, 
-			to prevent anyone from exploiting their power for evil.</p>
-			
-			<a href="http://store.steampowered.com/app/590590/">Wishlist now in Steam!</a>
-		</main>
+		<main id="midcontent"></main>
 	</div>
 		
 	<footer>
-		<a href="presskit">Presskit</a> <span>&copy; Tolga Ay 2017</span>
-		<a href="http://www.indiedb.com/games/naezith" title="View Remnants of Naezith on Indie DB" target="_blank"><img src="http://button.indiedb.com/popularity/medium/games/49414.png" alt="Remnants of Naezith"></a>
+		<a href="?id=presskit">Presskit</a> <span>&copy; Tolga Ay 2017</span>
+		<a href="http://www.indiedb.com/games/naezith" title="View Remnants of Naezith on Indie DB" target="_blank"><img src="https://button.indiedb.com/popularity/medium/games/49414.png" alt="Remnants of Naezith"></a>
 		<span title="Also indie ^-^">website by decldev</span>
 		<span class="pb"></span>
 	</footer>
