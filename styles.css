@@ -184,8 +184,7 @@ p.story ~ p.story::first-letter {
 }
 
 main img.photo {
-	transform: rotate(7deg);
-	border: 6px solid #dffff2;
+	border: 1px solid #dffff2;
 	box-shadow: -7px 7px 10px 0px rgba(0,0,0,0.75);
 }
 
