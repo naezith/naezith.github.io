@@ -21,8 +21,7 @@
 			// Set Nav buttons
 			var pages = ['home', 'contact', 'gallery']; 
 			for(var i in pages) { var pg = pages[i];
-				var class_tag = pg == 'home' ? : 'page home' : 'page';
-				$('#nav-' + pg).replaceWith(curr_pg == pg ? ('<span class="'+class_tag+'">'+pg+'</span>') : ('<a class="'+class_tag+'" href="'+(pg == 'home' ? '.' : ('?id='+pg))+'">'+pg+'</a>')); 
+				$('#nav-' + pg).replaceWith(curr_pg == pg ? ('<span class="page">'+pg+'</span>') : ('<a class="page" href="'+(pg == 'home' ? '.' : ('?id='+pg))+'">'+pg+'</a>')); 
 			}
 			
 			// Load the page content
