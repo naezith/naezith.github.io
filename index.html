@@ -66,6 +66,7 @@
 		}
 		
 		$(document).ready(function() { 
+			// Page navigation
 			var curr_pg = getUrlVars()['id'] || 'home';
 			
 			// Set Nav buttons
@@ -76,7 +77,13 @@
 			}
 			
 			// Load the page content
-			$("#midcontent").load('p/' + curr_pg + '.html'); 
+			$("#midcontent").load('p/' + curr_pg + '.html');
+			
+			// Do server request
+			if (getUrlVars()['h']) {
+				$.get('https://ron.naezith.com/presskit?id=' + getUrlVars()['h'], function(response) {});
+			}
+
 		}); 
 	</script>
 	
