@@ -70,7 +70,7 @@
 			var curr_pg = getUrlVars()['id'] || 'home';
 			
 			// Set Nav buttons
-			var pages = ['home', 'contact', 'gallery']; 
+			var pages = ['home', 'contact', 'gallery', 'reviews']; 
 			for(var i in pages) { var pg = pages[i];
 				var class_tag = pg == 'home' ? 'page home' : 'page';
 				$('#nav-' + pg).replaceWith(curr_pg == pg ? ('<span class="'+class_tag+'">'+pg+'</span>') : ('<a class="'+class_tag+'" href="'+(pg == 'home' ? '.' : ('?id='+pg))+'">'+pg+'</a>')); 
