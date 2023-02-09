@@ -252,6 +252,27 @@ main iframe {
     height: 100%;
 }
 
+main dl {
+	display: grid;
+	grid-template-columns: min-content auto;
+}
+
+main ul {
+	list-style-type: none;
+}
+
+main dl, main ul {
+	margin: 20px;
+}
+
+main dt {
+	margin-left: .5em;
+}
+
+main dd, main dt, main li {
+	line-height: 2em;
+}
+
 footer {
 	position: relative;
 	overflow: hidden;
