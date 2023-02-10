@@ -57,14 +57,15 @@ nav {
 	text-align: center;
 	white-space: nowrap;
 	line-height: 32px;
-	overflow: hidden;
 	text-indent: 0px;
 	border-top: 2px solid #242424;
 	box-shadow: 0px -10px 15px -5px rgba(0,0,0,0.75);
 }
 
-nav div {
-	display: inline-block;
+nav > div {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 nav a, nav a:visited, nav span {
@@ -250,6 +251,11 @@ main iframe {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+main .contact {
+	display: flex;
+	justify-content: space-between;
 }
 
 main dl {
@@ -611,12 +617,7 @@ span.pb {
 ########### */
 
 @media only screen and (max-device-width: 750px) {
-	nav div {
-		display: block;
-		margin: 0 auto;
-	}
-	
-	 #gallery .thumb {
+	#gallery .thumb {
         max-width: 100px;
 		max-height: 140px;
     }
@@ -640,7 +641,7 @@ span.pb {
 		height: 270px;
 	}
 	
-	 #gallery .thumb {
+	#gallery .thumb {
         max-width: 100px;
 		max-height: 100px;
     }
@@ -656,6 +657,10 @@ span.pb {
 	main figure, main figure.right, main figure.left {
 		margin-left: 0;
 		margin-right: 0;
-		float: none;
+	}
+
+	main .contact {
+		justify-content: flex-start;
+		flex-direction: column;
 	}
 }
