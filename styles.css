@@ -26,7 +26,7 @@ body {
 	left: -5px;
 	bottom: 0;
 	z-index: -1;
-	background: url('img/banner.jpg') center bottom no-repeat #000;
+	background: url('img/banner.png') center bottom no-repeat #000;
 }
 
 header {
